@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,14 +19,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherViewControllere" customModule="Clima" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="SxC-NE-ETe" userLabel="background">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCh-RF-H73">
-                                <rect key="frame" x="309" y="36" width="50" height="50"/>
+                                <rect key="frame" x="309" y="60" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3Oy-uj-b3k"/>
                                     <constraint firstAttribute="height" constant="50" id="Be4-aZ-5Pe"/>
@@ -34,7 +34,7 @@
                                 <state key="normal" backgroundImage="switch"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXe-vM-QE2">
-                                <rect key="frame" x="16" y="551" width="343" height="100"/>
+                                <rect key="frame" x="16" y="662" width="343" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="cMh-J9-NSB"/>
                                 </constraints>
@@ -43,13 +43,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="28P-lB-erZ">
-                                <rect key="frame" x="16" y="351" width="343" height="200"/>
+                                <rect key="frame" x="16" y="462" width="343" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="JXm-Xm-Q1J"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ci-n5-xW6">
-                                <rect key="frame" x="16" y="251" width="343" height="100"/>
+                                <rect key="frame" x="16" y="362" width="343" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="vSR-Zw-8UV"/>
                                 </constraints>
@@ -83,9 +83,71 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dEa-V0-RXF">
+            <objects>
+                <viewController id="6pZ-l4-DqL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5fB-d3-9YM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityBackground" translatesAutoresizingMaskIntoConstraints="NO" id="xda-po-6w9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygC-5R-riK">
+                                <rect key="frame" x="16" y="60" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="YJx-QF-uG9"/>
+                                    <constraint firstAttribute="width" constant="32" id="mCl-m1-xB6"/>
+                                </constraints>
+                                <state key="normal" image="left"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXy-tS-LPq">
+                                <rect key="frame" x="90" y="164" width="195" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="Nq2-qs-AMe"/>
+                                    <constraint firstAttribute="height" constant="30" id="nQM-xL-NFb"/>
+                                </constraints>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpt-oG-sP6">
+                                <rect key="frame" x="99" y="199" width="177" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VQJ-vf-cOh"/>
+                                    <constraint firstAttribute="width" constant="177" id="dAU-ja-urB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xda-po-6w9" firstAttribute="leading" secondItem="2R6-oM-Cny" secondAttribute="leading" id="FdO-2F-0A6"/>
+                            <constraint firstItem="dpt-oG-sP6" firstAttribute="centerX" secondItem="5fB-d3-9YM" secondAttribute="centerX" id="Pcv-vW-Gom"/>
+                            <constraint firstItem="xda-po-6w9" firstAttribute="top" secondItem="5fB-d3-9YM" secondAttribute="top" id="PfC-Ti-LO0"/>
+                            <constraint firstItem="sXy-tS-LPq" firstAttribute="top" secondItem="2R6-oM-Cny" secondAttribute="top" constant="120" id="WFK-Ft-hz0"/>
+                            <constraint firstItem="ygC-5R-riK" firstAttribute="top" secondItem="2R6-oM-Cny" secondAttribute="top" constant="16" id="dlw-8g-RKE"/>
+                            <constraint firstItem="xda-po-6w9" firstAttribute="trailing" secondItem="2R6-oM-Cny" secondAttribute="trailing" id="fd6-F9-kWQ"/>
+                            <constraint firstItem="dpt-oG-sP6" firstAttribute="top" secondItem="sXy-tS-LPq" secondAttribute="bottom" constant="5" id="mfw-tQ-uVc"/>
+                            <constraint firstItem="sXy-tS-LPq" firstAttribute="centerX" secondItem="5fB-d3-9YM" secondAttribute="centerX" id="n42-dy-fqf"/>
+                            <constraint firstItem="xda-po-6w9" firstAttribute="bottom" secondItem="2R6-oM-Cny" secondAttribute="bottom" id="syP-00-H8H"/>
+                            <constraint firstItem="ygC-5R-riK" firstAttribute="leading" secondItem="2R6-oM-Cny" secondAttribute="leading" constant="16" id="zhT-Go-btD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2R6-oM-Cny"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfB-TL-M64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.60000000000002" y="136.28185907046478"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background" width="500" height="755"/>
+        <image name="cityBackground" width="600" height="399"/>
+        <image name="left" width="32" height="32"/>
         <image name="switch" width="64" height="64"/>
     </resources>
 </document>
