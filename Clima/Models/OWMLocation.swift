@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct OWMLocation {
+    
+    var lat : Double
+    var lon : Double
+    
+}
