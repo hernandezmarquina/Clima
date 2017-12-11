@@ -42,7 +42,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="28P-lB-erZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shower3" translatesAutoresizingMaskIntoConstraints="NO" id="28P-lB-erZ">
                                 <rect key="frame" x="16" y="462" width="343" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="JXm-Xm-Q1J"/>
@@ -78,6 +78,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="weatherCityName" destination="QXe-vM-QE2" id="H0n-Fi-mb9"/>
+                        <outlet property="weatherIconImage" destination="28P-lB-erZ" id="N6O-4d-rbj"/>
+                        <outlet property="weatherTempLabel" destination="1Ci-n5-xW6" id="sD6-uv-Rbb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,6 +153,7 @@
         <image name="background" width="500" height="755"/>
         <image name="cityBackground" width="600" height="399"/>
         <image name="left" width="32" height="32"/>
+        <image name="shower3" width="128" height="128"/>
         <image name="switch" width="64" height="64"/>
     </resources>
 </document>

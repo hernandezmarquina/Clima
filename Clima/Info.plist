@@ -2,6 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>openweathermap.org</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>OWM_API_KEY</key>
+	<string>$(OWM_API_KEY)</string>
+	<key>OWM_API_BASE_URL</key>
+	<string>$(OWM_API_BASE_URL)</string>
 	<key>NSLocationUsageDescription</key>
 	<string>We need your location to obtain your current weather condition</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
