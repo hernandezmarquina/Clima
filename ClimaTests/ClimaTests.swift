@@ -21,16 +21,33 @@ class ClimaTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testKelvinToCelsiusConversion() {
+        let weatherApi = WeatherAPI()
+        
+        let kelvinValueToTest : Double = 300
+        
+        let correctCelciusValueExpression: Int = 26
+        
+        XCTAssertEqual(weatherApi.convertKelvinToCelsius(kelvin: kelvinValueToTest), correctCelciusValueExpression)
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testWeatherIconName(){
+        
+        var weather = Weather(temperature: 27, cityName: "Test City", condition: 1000)
+        
+        XCTAssertEqual(weather.getWeatherIconName(), "tstorm3")
+        
+        weather.condition = 500
+        
+        XCTAssertEqual(weather.getWeatherIconName(), "light_rain")
+        
+        weather.condition = 720
+        
+        XCTAssertEqual(weather.getWeatherIconName(), "fog")
+        
     }
+    
+    func 
     
 }
