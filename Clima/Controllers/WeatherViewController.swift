@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import SVProgressHUD
 
-class WeatherViewControllere: UIViewController, CLLocationManagerDelegate {
+class WeatherViewControllere: UIViewController, CLLocationManagerDelegate, ChangeCityViewDelegate {
     
     
     private var locationManager = CLLocationManager()
@@ -65,6 +65,28 @@ class WeatherViewControllere: UIViewController, CLLocationManagerDelegate {
     }
     
     /**
+     Get weather by City name.
+     
+     - parmeter cityName: City name
+     
+     */
+    private func getWeatherByCityName(cityName: String){
+        
+        SVProgressHUD.show()
+        
+        weatherApi.getWeatherByCityName(cityName: cityName, onSuccess: { (weather) in
+            
+            SVProgressHUD.dismiss()
+            self.updateUIWithWeatherData(weatherData: weather)
+            
+        }) { (error) in
+            
+            SVProgressHUD.dismiss()
+            self.updateUIWithError(error: error)
+        }
+    }
+    
+    /**
          Update UI with **Weather** data.
      
      - parameter weatherData: new weather data
@@ -95,6 +117,19 @@ class WeatherViewControllere: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
+    }
+    
+    func userEnteredANewCityName(_ cityName: String) {
+        getWeatherByCityName(cityName: cityName)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToChangeCity" {
+            let controller : ChangeCityViewController = segue.destination as! ChangeCityViewController
+            
+            controller.delegate = self
+        }
     }
 
 

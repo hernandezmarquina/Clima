@@ -18,6 +18,7 @@
 		AB08A50D1FDDC03F00129DDE /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08A50C1FDDC03F00129DDE /* WeatherAPI.swift */; };
 		AB08A50F1FDDD15500129DDE /* OWMLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08A50E1FDDD15500129DDE /* OWMLocation.swift */; };
 		AB08A5111FDE43CA00129DDE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08A5101FDE43CA00129DDE /* Weather.swift */; };
+		AB99B12B1FDE64C2007CE7F8 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB99B12A1FDE64C2007CE7F8 /* ChangeCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		AB08A50E1FDDD15500129DDE /* OWMLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMLocation.swift; sourceTree = "<group>"; };
 		AB08A5101FDE43CA00129DDE /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		AB7ABF9482F443725A239604 /* Pods-Clima.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clima.production.xcconfig"; path = "Pods/Target Support Files/Pods-Clima/Pods-Clima.production.xcconfig"; sourceTree = "<group>"; };
+		AB99B12A1FDE64C2007CE7F8 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 		B555ABF5B2176E0345D05DB7 /* Pods_ClimaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClimaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C307A210BCDDD28C5647C78B /* Pods_Clima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 			children = (
 				AB08A4DC1FDB4DD100129DDE /* AppDelegate.swift */,
 				AB08A4DE1FDB4DD100129DDE /* WeatherViewController.swift */,
+				AB99B12A1FDE64C2007CE7F8 /* ChangeCityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				AB08A4DD1FDB4DD100129DDE /* AppDelegate.swift in Sources */,
 				AB08A50D1FDDC03F00129DDE /* WeatherAPI.swift in Sources */,
 				AB08A5111FDE43CA00129DDE /* Weather.swift in Sources */,
+				AB99B12B1FDE64C2007CE7F8 /* ChangeCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
